@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alien2</title>
+    <style>
+        body { background-color: lightskyblue;}
+        div {
+            margin: 0px auto;
+            background-color: wheat;
+            border: 1px solid black;
+            border-radius: 3px;
+            padding: 10px;
+            width: 300px;
+        }
+    </style>
+    <script>
+        function program(id, kep) {   
+            let mostKep = kep; 
+            if (kep == 4) {
+                document.getElementById(id).src = "alien" + 1 + ".png";
+                document.getElementById(id).onclick = program(id, 1);
+            } else {
+                document.getElementById(id).src = "alien" + mostKep+1 + ".png";
+                document.getElementById(id).onclick = program(id, mostKep+1);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <img id="elso" src="alien1.png" onclick="program('elso', 1)">
+        <img id="masodik" src="alien2.png" onclick="program('masodik', 2)">
+        <img id="harmadik" src="alien3.png" onclick="program('harmadik', 3)">
+        <img id="negyedik" src="alien4.png" onclick="program('negyedik', 4)">
+    </div>
+</body>
+</html>
