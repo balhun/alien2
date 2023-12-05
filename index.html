@@ -24,7 +24,7 @@
                 document.getElementById(id).onclick = program(id, 1);
             } else {
                 document.getElementById(id).src = "alien" + mostKep+1 + ".png";
-                document.getElementById(id).onclick = program(id, mostKep+1);
+                document.getElementById(id).setAttribute("onclick", "program(" + id + ", " + mostKep + 1 + ")");
             }
         }
     </script>
